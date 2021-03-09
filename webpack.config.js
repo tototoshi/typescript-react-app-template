@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
+const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 
 const isDevelopment = process.env.NODE_ENV !== "production";
 
@@ -39,6 +40,7 @@ module.exports = {
       template: "./src/index.html",
     }),
     ...(isDevelopment ? [new ReactRefreshWebpackPlugin()] : []),
+    new ForkTsCheckerWebpackPlugin(),
   ],
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".jsx"],
