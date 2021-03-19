@@ -1,3 +1,4 @@
+import "./app.css";
 import React, { useState } from "react";
 
 export default function App() {
