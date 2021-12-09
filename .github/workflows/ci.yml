@@ -2,17 +2,15 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2.5.0
-    - run: make install build
-    
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.5.0
+      - run: make install build
