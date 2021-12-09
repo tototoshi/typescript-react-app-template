@@ -13,3 +13,6 @@ serve:
 
 clean:
 	rm -rf dist/
+
+fmt:
+	npx prettier --write .
