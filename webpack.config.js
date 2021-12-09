@@ -12,8 +12,7 @@ module.exports = {
   entry: "./src/index.tsx",
   devtool: "inline-source-map",
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
-    hotOnly: true,
+    static: path.join(__dirname, "dist")
   },
   module: {
     rules: [

@@ -1,35 +1,26 @@
 import "./app.css";
 import React, { useState } from "react";
-import { Link, Route, Router, Switch } from "react-router-dom";
-import { createBrowserHistory } from "history";
-
-const history = createBrowserHistory();
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 
 export default function App() {
   return (
-    <Router history={history}>
+    <Router>
       <ul>
         <li>
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/about">Abount</Link>
+          <Link to="/about">About</Link>
         </li>
         <li>
           <Link to="/counter">Counter</Link>
         </li>
       </ul>
-      <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/counter">
-          <Counter />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/about" element={<About />} />
+        <Route path="/counter" element={<Counter />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
     </Router>
   );
 }
@@ -43,7 +34,11 @@ function Home() {
 }
 
 function About() {
-  return <h2>About</h2>;
+  return (
+    <React.Fragment>
+      <h2>About</h2>
+    </React.Fragment>
+  );
 }
 
 function Counter() {
