@@ -1,7 +1,7 @@
 {
   "name": "@tototoshi/typescript-react-app-template",
   "dependencies": {
-    "react": "^18.1.0",
+    "react": "^18.2.0",
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
@@ -10,7 +10,7 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
-    "@types/react": "^18.0.12",
+    "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
